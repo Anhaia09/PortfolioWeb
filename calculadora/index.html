@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a viewport para dispositivos móveis -->
+    <title>Banco de Dados</title> <!-- Título da página exibido na aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo de estilos CSS local -->
+
+    <!-- Link para os ícones da BoxIcons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Links para as fontes do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Pré-conexão para o Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Pré-conexão para o Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> <!-- Importa as fontes Caveat e Jost do Google Fonts -->
+</head>
+<body>
+    <header>
+        <div class="nav-right">
+            <a href="../index.html" class="nav-btn">Voltar</a> <!-- Botão para voltar à página inicial -->
+            <div class="bx bx-menu" id="menu-icon"></div> <!-- Ícone de menu -->
+        </div>
+    </header>
+
+    <section class="texto">
+        <div class="textos">
+            <h1><span>Banco de </span>Dados</h1> <!-- Título principal com uma palavra destacada -->
+            <p>Um banco de dados é uma coleção organizada de informações - ou dados - estruturadas, normalmente armazenadas eletronicamente <br> em um sistema de computador. Um banco de dados é geralmente controlado por um sistema de gerenciamento de banco de dados (DBMS).</p> <!-- Parágrafo introdutório -->
+            <hr> <!-- Linha horizontal -->
+            <br> <!-- Quebra de linha -->
+            <h4>O que são dados?</h4> <!-- Título de seção -->
+            <p>São elementos que constituem a matéria prima da informação.</p> <!-- Parágrafo explicativo -->
+            <div class="imagem-inicio">
+                <img src="imagens/piramide.png" alt="piramide"> <!-- Imagem de uma pirâmide com atributo alt -->
+            </div> <!-- Div para imagem -->
+            <hr> <!-- Linha horizontal -->
+            <br> <!-- Quebra de linha -->
+
+            <h4>O que é Modelagem de dados?</h4> <!-- Título de seção -->
+            <p>É o processo de diagramação do fluxo de dados. Representa o processo de criação visual, ou esquema, de um sistema de informação <br> ou de partes dele, definindo os sistemas de coleta e gerenciamento de informações de uma empresa ou organização.</p> <!-- Parágrafo explicativo -->
+            <div class="imagem-inicio">
+                <img src="imagens/diagrama.png" alt="diagrama"> <!-- Imagem de um diagrama com atributo alt -->
+            </div> <!-- Div para imagem -->
+            <hr> <!-- Linha horizontal -->
+            <br> <!-- Quebra de linha -->
+
+            <h4>Estrutura de Dados</h4> <!-- Título de seção -->
+            <p> ● Dados Estruturados: são dados que usam um formato predefinido e esperado. Isso pode vir de muitas fontes diferentes, <br> mas o fator comum é que os campos são fixos, assim como a maneira como são armazenados (portanto, estruturados).</p> <!-- Parágrafo explicativo -->
+            <p> ● Dados Semi Estruturados: são parcialmente organizados; portanto, o nível de organização é menor do que os dados estruturados, <br> mas maior do que os dados não estruturados.</p> <!-- Parágrafo explicativo -->
+            <p> ● Dados não Estruturados: os dados não estruturados não têm definição. Em vez de campos predefinidos em um formato objetivo, <br> os dados não estruturados podem vir em todas as formas e tamanhos.</p> <!-- Parágrafo explicativo -->
+            <div class="imagens">
+                <img src="imagens/estrutura.png" alt="estrutura"> <!-- Imagem de estrutura com atributo alt -->
+            </div> <!-- Div para imagem -->
+            <hr> <!-- Linha horizontal -->
+            <br> <!-- Quebra de linha -->
+
+            <h4>Banco de Dados Relacionais</h4> <!-- Título de seção -->
+            <p>● Modelo Entidade Relacionamento (MER): é utilizado para descrever os objetos do mundo real através de entidades, <br> com suas propriedades que são os atributos e os seus relacionamentos. Ex:</p> <!-- Parágrafo explicativo -->
+            <div class="imagens">
+                <img src="imagens/Ex_diagrama.png" alt="diagrama"> <!-- Exemplo de diagrama com atributo alt -->
+            </div> <!-- Div para imagem -->
+            <p> ● PRIMARY KEY: valor único e não ausente que representa cada item salvo no Banco de Dados.</p> <!-- Parágrafo explicativo -->
+            <p> ● FOREIGN KEY: é a primary key importada de outra entidade que estabelece relacionamento entre as entidades.</p> <!-- Parágrafo explicativo -->
+            <p> ● REGRA: <br> 1. Em um relacionamento 1 para N, a foreign key fica sempre do lado N. <br> 2. Em um relacionamento N para N, o relacionamento se torna uma entidade que terá como campos as primary keys das outras duas <br> entidades ambas como foreign keys. Por apenas abrigar foreign keys esta nova entidade “Consulta” é denominada entidade fraca.</p> <!-- Parágrafo explicativo -->
+            <hr> <!-- Linha horizontal -->
+            <br> <!-- Quebra de linha -->
+
+            <h4>SGBD - Sistema de Gerenciamento de Banco de Dados (PostgreSQL)</h4> <!-- Título de seção -->
+            <p>Comandos DDL (Data Definition Language) <!-- Parágrafo explicativo -->
+                <div class="imagens-comandos">
+                    <img src="imagens/create.PNG" alt="create"> <!-- Imagem de exemplo CREATE com atributo alt -->
+                    <img src="imagens/alter.PNG" alt="alter"> <!-- Imagem de exemplo ALTER com atributo alt -->
+                    <img src="imagens/drope.PNG" alt="drope"> <!-- Imagem de exemplo DROP com atributo alt -->
+                </div>
+            </p> <!-- Fim do parágrafo explicativo -->
+            <hr> <!-- Linha horizontal -->
+            <br> <!-- Quebra de linha -->
+
+            <p>Comandos DML - Data Manipulation Language</p> <!-- Parágrafo explicativo -->
+            <div class="imagens-comandos">
+                <img src="imagens/insert.PNG" alt="insert"> <!-- Imagem de exemplo INSERT com atributo alt -->
+                <img src="imagens/update.PNG" alt="update"> <!-- Imagem de exemplo UPDATE com atributo alt -->
+                <img src="imagens/delete.PNG" alt="delete"> <!-- Imagem de exemplo DELETE com atributo alt -->
+                <img src="imagens/select.PNG" alt="select"> <!-- Imagem de exemplo SELECT com atributo alt -->
+            </div>
+            <hr> <!-- Linha horizontal -->
+            <br> <!-- Quebra de linha -->
+
+            <p>Comandos DQL - Data Query Language</p> <!-- Parágrafo explicativo -->
+            <div class="imagens-comandos">
+                <img src="imagens/orderby.PNG" alt="orderby"> <!-- Imagem de exemplo ORDER BY com atributo alt -->
+                <img src="imagens/join.PNG" alt="join"> <!-- Imagem de exemplo JOIN com atributo alt -->
+                <img src="imagens/group.PNG" alt="group"> <!-- Imagem de exemplo GROUP BY com atributo alt -->
+            </div>
+            <hr> <!-- Linha horizontal -->
+            <br> <!-- Quebra de linha -->
+
+            <h4>Normalização</h4><br> <!-- Título de seção com quebra de linha -->
+            <p>Normalização é o processo de organização de dados em um banco de dados. Isso inclui a criação de tabelas e o estabelecimento de relações <br> entre essas tabelas de acordo com as regras projetadas para proteger os dados e tornar o banco de dados mais flexível, eliminando a <br> redundância e a dependência inconsistente.</p> <!-- Parágrafo explicativo -->
+            <div class="imagens">
+                <img src="imagens/normalizacao.png" alt="normalizacao"> <!-- Imagem de exemplo de normalização com atributo alt -->
+            </div> <!-- Div para imagem -->
+            <hr> <!-- Linha horizontal -->
+            <br> <!-- Quebra de linha -->
+
+            <h4>Banco de Dados NoSQL</h4> <!-- Título de seção -->
+            <p>Bancos de dados NoSQL operam bem com dados desestruturados, como e-mails, dados multimídia e dados provenientes de mídias <br> sociais. Vantagens e Desvantagens: </p> <!-- Parágrafo explicativo -->
+
+            <p> ● Ausência de esquema (Schema free) ou esquema flexível</p> <!-- Lista de vantagens -->
+            <p> ● Os dados podem possuir qualquer número de atributos de qualquer tipo</p> <!-- Lista de vantagens -->
+            <p> ● Facilita alta escalabilidade e alta disponibilidade</p> <!-- Lista de vantagens -->
+            <p> ● Não há garantia de integridade dos dados como no modelo relacional</p> <!-- Lista de desvantagens -->
+            <p> ● Escalabilidade massiva (processamento)</p> <!-- Lista de vantagens -->
+            <p> ● Consistência relaxada em prol do alto desempenho e disponibilidade</p> <!-- Lista de desvantagens -->
+            <p> ● Não tem linguagem de consulta declarativa → mais programação!</p> <!-- Lista de desvantagens -->
+            <p> ● Consistência relaxada implica menos garantias de integridade</p> <!-- Lista de desvantagens -->
+            <hr> <!-- Linha horizontal -->
+            <br> <!-- Quebra de linha -->
+
+            <h4>Operando com o MongoDB</h4> <!-- Título de seção -->
+            <p>- Consultas realizadas:</p> <!-- Parágrafo explicativo -->
+
+            <div class="imagens">
+                <img src="imagens/mongodb.png" alt="mongodb"> <!-- Imagem de exemplo do MongoDB com atributo alt -->
+                <img src="imagens/mongodb2.png" alt="mongodb2"> <!-- Segunda imagem de exemplo do MongoDB com atributo alt -->
+            </div> <!-- Div para imagens -->
+            <hr> <!-- Linha horizontal -->
+        </div> <!-- Fim da div com classe "textos" -->
+    </section> <!-- Fim da seção com classe "texto" -->
+
+    <section class="textos">
+        <h3>Para mais projetos acesse meu <a href="https://github.com/Anhaia09/Banco_de_Dados" target="_blank">GitHub <i class="bx bxl-github"></i></a></h3> <!-- Link para o GitHub da autora -->
+    </section> <!-- Fim da seção com classe "textos" -->
+
+    <footer class="rodape">
+        <h5>@Letícia Anhaia</h5> <!-- Texto de rodapé com o nome da autora -->
+    </footer> <!-- Fim do rodapé -->
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> <!-- Link para a biblioteca Typed.js -->
+    <script src="script.js"></script> <!-- Link para o arquivo de script JavaScript -->
+</body>
+</html>
+

@@ -1,0 +1,633 @@
+* {
+    padding: 0; /* Define o preenchimento interno de todos os elementos como 0 */
+    margin: 0; /* Define a margem externa de todos os elementos como 0 */
+    box-sizing: border-box; /* Define o modelo de caixa como border-box, onde o tamanho total do elemento inclui padding e border, mas não a margem */
+    list-style: none; /* Remove os estilos padrão de lista (marcadores) */
+    text-decoration: none; /* Remove decoração de texto, como sublinhado em links */
+    font-family: "Jost", sans-serif; /* Define a fonte padrão para todos os elementos como "Jost", uma fonte sans-serif, se não estiver disponível, usa uma fonte sans-serif genérica */
+}
+
+html {
+    scroll-behavior: smooth; /* Define o comportamento da rolagem para suave */
+}
+
+
+:root {
+    --bg-color: #1d1c1b; /* Define a variável --bg-color com o valor #1d1c1b */
+    --text-color: #fff; /* Define a variável --text-color com o valor #fff (branco) */
+    --main-color: #8a00a3; /* Define a variável --main-color com o valor #8a00a3 */
+    --other-color: #858585; /* Define a variável --other-color com o valor #858585 */
+    --h1-font: 5rem; /* Define a variável --h1-font com o valor 5rem */
+    --p-font: 1.1rem; /* Define a variável --p-font com o valor 1.1rem */
+}
+
+body {
+    background: var(--bg-color); /* Aplica o valor da variável --bg-color como cor de fundo do corpo (body) */
+    color: var(--text-color); /* Aplica o valor da variável --text-color como cor do texto do corpo (body) */
+}
+
+
+header {
+    position: fixed; /* Define a posição fixa para que o cabeçalho permaneça fixo na parte superior da janela de visualização */
+    width: 100%; /* Define a largura do cabeçalho como 100% da largura do viewport */
+    top: 0; /* Coloca o cabeçalho no topo da janela de visualização */
+    right: 0; /* Coloca o cabeçalho alinhado à direita da janela de visualização */
+    z-index: 1000; /* Define a ordem de empilhamento do cabeçalho, garantindo que fique acima de outros elementos */
+    padding: 32px 13%; /* Define o preenchimento interno do cabeçalho */
+    display: flex; /* Define o modelo de exibição flexível para o cabeçalho */
+    align-items: center; /* Centraliza os itens verticalmente dentro do cabeçalho */
+    justify-content: space-between; /* Distribui os itens horizontalmente no cabeçalho com espaço entre eles */
+    transition: all .50s ease; /* Adiciona uma transição suave para todas as propriedades do cabeçalho */
+    background: var(--bg-color); /* Aplica a cor de fundo do cabeçalho utilizando a variável --bg-color */
+    text-align: center; /* Alinha o texto ao centro dentro do cabeçalho */
+}
+
+
+.navlist {
+    display: flex; /* Define o modelo de exibição flexível para o elemento com a classe .navlist */
+}
+
+.navlist a {
+    display: inline-flex; /* Define o modelo de exibição flexível para os elementos âncora dentro de .navlist, tornando-os flexíveis em linha */
+    font-size: var(--p-font); /* Define o tamanho da fonte usando a variável --p-font */
+    font-weight: 500; /* Define a espessura da fonte como 500 (médio) */
+    color: var(--text-color); /* Define a cor do texto usando a variável --text-color */
+    margin: 0 30px; /* Define margens de 0 para o topo e o fundo e 30px para os lados esquerdo e direito */
+    transition: all .6s ease; /* Adiciona uma transição suave para todas as mudanças de propriedade com duração de 0.6 segundos e função de transição "ease" */
+    text-align: center; /* Alinha o texto ao centro dentro dos links */
+}
+
+
+
+.navlist a:hover {
+    color: var(--main-color); /* Muda a cor do texto para a variável --other-color ao passar o mouse sobre os links */
+    transform: translateY(-6px); /* Aplica uma transformação de translação para mover o elemento para cima (-6px) ao passar o mouse sobre os links */
+}
+
+.nav-right {
+    display: flex; /* Define o modelo de exibição flexível para o elemento com a classe .nav-right */
+    align-items: center; /* Centraliza os itens verticalmente dentro de .nav-right */
+}
+
+
+.nav-btn {
+    display: inline-block; /* Define o modelo de exibição como bloco em linha para o botão */
+    padding: 14px 35px; /* Define o preenchimento interno do botão */
+    background: var(--main-color); /* Define o fundo do botão usando a variável --main-color */
+    color: var(--text-color); /* Define a cor do texto usando a variável --text-color */
+    font-size: 15px; /* Define o tamanho da fonte como 15 pixels */
+    font-weight: 700; /* Define a espessura da fonte como negrito (font-weight: 700) */
+    text-transform: uppercase; /* Transforma o texto para maiúsculas */
+    letter-spacing: .05em; /* Define o espaçamento entre as letras */
+    border-radius: 30px; /* Define o raio da borda para criar cantos arredondados */
+    border: 2px solid rgb(255, 255, 255); /* Define uma borda de 2 pixels sólida com cor branca */
+    transition: all .6s ease; /* Adiciona uma transição suave para todas as mudanças de propriedade com duração de 0.6 segundos e função de transição "ease" */
+}
+
+.nav-btn:hover {
+    background: transparent; /* Muda o fundo do botão para transparente ao passar o mouse sobre ele */
+    border: 2px solid var(--main-color); /* Muda a cor da borda para a variável --main-color ao passar o mouse sobre o botão */
+}
+
+
+#menu-icone {
+    font-size: 40px; /* Define o tamanho da fonte para o ícone de menu como 40 pixels */
+    cursor: pointer; /* Define o cursor do mouse como ponteiro para indicar que o elemento é clicável */
+    z-index: 10001; /* Define a ordem de empilhamento do ícone de menu */
+    margin-left: 20px; /* Define a margem à esquerda do ícone de menu */
+    display: none; /* Esconde inicialmente o ícone de menu */
+}
+
+section {
+    padding: 0px 13% 0px; /* Define o preenchimento interno para a seção */
+}
+
+.inicio {
+    display: flex; /* Define o modelo de exibição flexível para o elemento com a classe .hero */
+    align-items: center; /* Centraliza os itens verticalmente dentro de .hero */
+    justify-content: space-between; /* Distribui os itens horizontalmente em .hero com espaço entre eles */
+    gap: 3rem; /* Define o espaçamento entre os itens em .hero */
+    height: 100vh; /* Define a altura de .hero como 100% da altura da janela de visualização */
+}
+
+.inicio-img {
+    flex: 0 1 auto; /* Define o comportamento de flex para .hero-img */
+    max-width: 200px; /* Define a largura máxima para .hero-img como 200 pixels */
+    width: 100%; /* Define a largura de .hero-img como 100% */
+}
+
+.inicio-img img {
+    width: 100%; /* Garante que a imagem dentro de .hero-img ocupe 100% da largura disponível */
+    height: auto; /* Permite que a altura da imagem seja ajustada automaticamente */
+    object-fit: contain; /* Define como a imagem deve se ajustar ao espaço disponível dentro de .hero-img */
+}
+
+
+.textos {
+    flex: 1; /* Permite que o texto dentro de .hero-text ocupe o espaço restante dentro do contêiner flexível pai */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.textos h1 {
+    font-size: var(--h1-font); /* Define o tamanho da fonte para o título h1 usando a variável --h1-font */
+    line-height: 1.1; /* Define a altura da linha como 1.1 para o título h1 */
+    font-weight: 700; /* Define a espessura da fonte como negrito (font-weight: 700) para o título h1 */
+    margin: 20px 0; /* Define margens superior e inferior de 20 pixels e margens laterais de 0 para o título h1 */
+    text-transform: uppercase; /* Transforma o texto do título h1 em maiúsculas */
+    letter-spacing: 2px; /* Define o espaçamento entre as letras do título h1 */
+    text-shadow: -1px -1px 0px #000, 7px 7px 0px #000, 9px 9px 0px #00000055; /* Adiciona sombra ao texto do título h1 */
+}
+
+.textos h1 span {
+    color: var(--main-color); /* Define a cor do texto dentro de <span> no título h1 usando a variável --main-color */
+}
+
+.textos h6 {
+    font-size: 22px; /* Define o tamanho da fonte como 22 pixels para o título h6 */
+    font-weight: 600; /* Define a espessura da fonte como 600 (semi-negrito) para o título h6 */
+    margin-top: 60px; /* Define a margem superior de 60 pixels para o título h6 */
+    color: var(--text-color); /* Define a cor do texto para o título h6 usando a variável --text-color */
+}
+
+.textos h6 span {
+    color: var(--main-color); /* Define a cor do texto dentro de <span> no título h6 usando a variável --main-color */
+}
+
+
+.textos h4 {
+    font-family: "Caveat", cursive; /* Define a família da fonte para o título h4 como "Caveat" e, se não disponível, uma fonte genérica do tipo cursive */
+    font-size: 35px; /* Define o tamanho da fonte para o título h4 como 35 pixels */
+    font-weight: bold; /* Define a espessura da fonte como negrito para o título h4 */
+    margin-bottom: 30px; /* Define a margem inferior de 30 pixels para o título h4 */
+}
+
+.textos p {
+    font-size: var(--p-font); /* Define o tamanho da fonte para os parágrafos usando a variável --p-font */
+    color: var(--other-color); /* Define a cor do texto para os parágrafos usando a variável --other-color */
+    margin-bottom: 20px; /* Define a margem inferior de 20 pixels para os parágrafos */
+    line-height: 2; /* Define a altura da linha como 2 para os parágrafos */
+}
+
+.portifolio_web {
+    display: flex; /* Define o modelo de exibição flexível para o elemento com a classe .portifolio_web */
+    align-items: center; /* Centraliza os itens verticalmente dentro de .portifolio_web */
+    justify-content: space-between; /* Distribui os itens horizontalmente em .portifolio_web com espaço entre eles */
+    gap: 3rem; /* Define o espaçamento entre os itens em .portifolio_web como 3 rem (unidade relativa ao tamanho da fonte do root) */
+    height: 100vh; /* Define a altura de .portifolio_web como 100% da altura da janela de visualização */
+}
+
+.portifolio_web-img {
+    flex: 0 1 auto; /* Ajusta o comportamento de flex para .portifolio_web-img */
+    max-width: 150px; /* Define a largura máxima para .portifolio_web-img como 150 pixels */
+    width: 100%; /* Define a largura de .portifolio_web-img como 100% */
+}
+
+.portifolio_web-img img {
+    width: 100%; /* Garante que a imagem dentro de .portifolio_web-img ocupe 100% da largura disponível */
+    height: auto; /* Permite que a altura da imagem seja ajustada automaticamente */
+    object-fit: contain; /* Define como a imagem deve se ajustar ao espaço disponível dentro de .portifolio_web-img */
+}
+
+.portifolio_web-textos {
+    flex: 1; /* Permite que o texto dentro de .portifolio_web-text ocupe o espaço restante dentro do contêiner flexível pai */
+    text-align: left; /* Alinha o texto à esquerda dentro de .portifolio_web-text */
+}
+
+.portifolio_web-textos a, h6 {
+    font-size: 22px; /* Define o tamanho da fonte como 22 pixels para âncoras e títulos h6 dentro de .portifolio_web-text */
+    font-weight: 600; /* Define a espessura da fonte como 600 (semi-negrito) para âncoras e títulos h6 */
+    margin-top: 60px; /* Define a margem superior de 60 pixels para âncoras e títulos h6 dentro de .portifolio_web-text */
+    color: var(--main-color); /* Define a cor do texto para âncoras e títulos h6 usando a variável --main-color */
+}
+
+.portifolio_web-textos p {
+    font-size: var(--p-font); /* Define o tamanho da fonte para os parágrafos dentro de .portifolio_web-text usando a variável --p-font */
+    color: var(--other-color); /* Define a cor do texto para os parágrafos dentro de .portifolio_web-text usando a variável --other-color */
+    margin-bottom: 20px; /* Define a margem inferior de 20 pixels para os parágrafos dentro de .portifolio_web-text */
+    line-height: 2; /* Define a altura da linha como 2 para os parágrafos dentro de .portifolio_web-text */
+}
+
+.portifolio_web-icones i {
+    display: inline-block; /* Define o modelo de exibição como bloco em linha para os ícones dentro de .portifolio_web-icons */
+    font-size: 24px; /* Define o tamanho da fonte para os ícones como 24 pixels */
+    color: var(--text-color); /* Define a cor do texto para os ícones usando a variável --text-color */
+    margin-right: 20px; /* Define a margem à direita de 20 pixels para os ícones */
+    transition: all .6s ease; /* Adiciona uma transição suave para todas as mudanças de propriedade com duração de 0.6 segundos e função de transição "ease" */
+    margin-bottom: 40px; /* Define a margem inferior de 40 pixels para os ícones */
+}
+
+
+.portifolio_automacao {
+    display: flex; /* Define o modelo de exibição flexível para o elemento com a classe .portifolio_automacao */
+    align-items: center; /* Centraliza os itens verticalmente dentro de .portifolio_automacao */
+    justify-content: space-between; /* Distribui os itens horizontalmente em .portifolio_automacao com espaço entre eles */
+    gap: 3rem; /* Define o espaçamento entre os itens em .portifolio_automacao como 3 rem (unidade relativa ao tamanho da fonte do root) */
+    height: 100vh; /* Define a altura de .portifolio_automacao como 100% da altura da janela de visualização */
+}
+
+.portifolio_automacao-img {
+    flex: 0 1 auto; /* Ajusta o comportamento de flex para .portifolio_automacao-img */
+    max-width: 150px; /* Define a largura máxima para .portifolio_automacao-img como 150 pixels */
+    width: 100%; /* Define a largura de .portifolio_automacao-img como 100% */
+}
+
+.portifolio_automacao-img img {
+    width: 100%; /* Garante que a imagem dentro de .portifolio_automacao-img ocupe 100% da largura disponível */
+    height: auto; /* Permite que a altura da imagem seja ajustada automaticamente */
+    object-fit: contain; /* Define como a imagem deve se ajustar ao espaço disponível dentro de .portifolio_automacao-img */
+}
+
+.portifolio_automacao-textos {
+    flex: 1; /* Permite que o texto dentro de .portifolio_automacao-text ocupe o espaço restante dentro do contêiner flexível pai */
+    text-align: left; /* Alinha o texto à esquerda dentro de .portifolio_automacao-text */
+}
+
+.portifolio_automacao-textos a, h6 {
+    font-size: 22px; /* Define o tamanho da fonte como 22 pixels para âncoras e títulos h6 dentro de .portifolio_automacao-text */
+    font-weight: 600; /* Define a espessura da fonte como 600 (semi-negrito) para âncoras e títulos h6 */
+    margin-top: 60px; /* Define a margem superior de 60 pixels para âncoras e títulos h6 dentro de .portifolio_automacao-text */
+    color: var(--main-color); /* Define a cor do texto para âncoras e títulos h6 usando a variável --main-color */
+}
+
+.portifolio_automacao-textos p {
+    font-size: var(--p-font); /* Define o tamanho da fonte para os parágrafos dentro de .portifolio_automacao-text usando a variável --p-font */
+    color: var(--other-color); /* Define a cor do texto para os parágrafos dentro de .portifolio_automacao-text usando a variável --other-color */
+    margin-bottom: 20px; /* Define a margem inferior de 20 pixels para os parágrafos dentro de .portifolio_automacao-text */
+    line-height: 2; /* Define a altura da linha como 2 para os parágrafos dentro de .portifolio_automacao-text */
+}
+
+.portifolio_automacao-icones i {
+    display: inline-block; /* Define o modelo de exibição como bloco em linha para os ícones dentro de .portifolio_automacao-icons */
+    font-size: 30px; /* Define o tamanho da fonte para os ícones como 30 pixels */
+    color: var(--text-color); /* Define a cor do texto para os ícones usando a variável --text-color */
+    margin-right: 20px; /* Define a margem à direita de 20 pixels para os ícones */
+    transition: all .6s ease; /* Adiciona uma transição suave para todas as mudanças de propriedade com duração de 0.6 segundos e função de transição "ease" */
+    margin-bottom: 40px; /* Define a margem inferior de 40 pixels para os ícones */
+}
+
+
+.portifolio_bd {
+    display: flex; /* Define o modelo de exibição flexível para o elemento com a classe .portifolio_bd */
+    align-items: center; /* Centraliza os itens verticalmente dentro de .portifolio_bd */
+    justify-content: space-between; /* Distribui os itens horizontalmente em .portifolio_bd com espaço entre eles */
+    gap: 3rem; /* Define o espaçamento entre os itens em .portifolio_bd como 3 rem (unidade relativa ao tamanho da fonte do root) */
+    height: 100vh; /* Define a altura de .portifolio_bd como 100% da altura da janela de visualização */
+}
+
+.portifolio_bd-img {
+    flex: 0 1 auto; /* Ajusta o comportamento de flex para .portifolio_bd-img */
+    max-width: 150px; /* Define a largura máxima para .portifolio_bd-img como 150 pixels */
+    width: 100%; /* Define a largura de .portifolio_bd-img como 100% */
+}
+
+.portifolio_bd-img img {
+    width: 100%; /* Garante que a imagem dentro de .portifolio_bd-img ocupe 100% da largura disponível */
+    height: auto; /* Permite que a altura da imagem seja ajustada automaticamente */
+    object-fit: contain; /* Define como a imagem deve se ajustar ao espaço disponível dentro de .portifolio_bd-img */
+}
+
+.portifolio_bd-textos {
+    flex: 1; /* Permite que o texto dentro de .portifolio_bd-text ocupe o espaço restante dentro do contêiner flexível pai */
+    text-align: left; /* Alinha o texto à esquerda dentro de .portifolio_bd-text */
+}
+
+.portifolio_bd-textos a, h6 {
+    font-size: 22px; /* Define o tamanho da fonte como 22 pixels para âncoras e títulos h6 dentro de .portifolio_bd-text */
+    font-weight: 600; /* Define a espessura da fonte como 600 (semi-negrito) para âncoras e títulos h6 */
+    margin-top: 60px; /* Define a margem superior de 60 pixels para âncoras e títulos h6 dentro de .portifolio_bd-text */
+    color: var(--main-color); /* Define a cor do texto para âncoras e títulos h6 usando a variável --main-color */
+}
+
+.portifolio_bd-textos p {
+    font-size: var(--p-font); /* Define o tamanho da fonte para os parágrafos dentro de .portifolio_bd-text usando a variável --p-font */
+    color: var(--other-color); /* Define a cor do texto para os parágrafos dentro de .portifolio_bd-text usando a variável --other-color */
+    margin-bottom: 20px; /* Define a margem inferior de 20 pixels para os parágrafos dentro de .portifolio_bd-text */
+    line-height: 2; /* Define a altura da linha como 2 para os parágrafos dentro de .portifolio_bd-text */
+}
+
+.portifolio_bd-icones i {
+    display: inline-block; /* Define o modelo de exibição como bloco em linha para os ícones dentro de .portifolio_bd-icons */
+    font-size: 30px; /* Define o tamanho da fonte para os ícones como 30 pixels */
+    color: var(--text-color); /* Define a cor do texto para os ícones usando a variável --text-color */
+    margin-right: 20px; /* Define a margem à direita de 20 pixels para os ícones */
+    transition: all .6s ease; /* Adiciona uma transição suave para todas as mudanças de propriedade com duração de 0.6 segundos e função de transição "ease" */
+    margin-bottom: 40px; /* Define a margem inferior de 40 pixels para os ícones */
+}
+
+.portifolio_dados {
+    display: flex; /* Define o modelo de exibição flexível para o elemento com a classe .portifolio_dados */
+    align-items: center; /* Centraliza os itens verticalmente dentro de .portifolio_dados */
+    justify-content: space-between; /* Distribui os itens horizontalmente em .portifolio_dados com espaço entre eles */
+    gap: 3rem; /* Define o espaçamento entre os itens em .portifolio_dados como 3 rem (unidade relativa ao tamanho da fonte do root) */
+    height: 10vh; /* Define a altura de .portifolio_dados como 10% da altura da janela de visualização */
+}
+
+.portifolio_dados-img {
+    flex: 0 1 auto; /* Ajusta o comportamento de flex para .portifolio_dados-img */
+    max-width: 150px; /* Define a largura máxima para .portifolio_dados-img como 150 pixels */
+    width: 100%; /* Define a largura de .portifolio_dados-img como 100% */
+}
+
+.portifolio_dados-img img {
+    width: 100%; /* Garante que a imagem dentro de .portifolio_dados-img ocupe 100% da largura disponível */
+    height: auto; /* Permite que a altura da imagem seja ajustada automaticamente */
+    object-fit: contain; /* Define como a imagem deve se ajustar ao espaço disponível dentro de .portifolio_dados-img */
+}
+
+.portifolio_dados-textos {
+    flex: 1; /* Permite que o texto dentro de .portifolio_dados-text ocupe o espaço restante dentro do contêiner flexível pai */
+    text-align: left; /* Alinha o texto à esquerda dentro de .portifolio_dados-text */
+}
+
+.portifolio_dados-textos a,h6 {
+    font-size: 22px; /* Define o tamanho da fonte como 22 pixels para âncoras e títulos h6 dentro de .portifolio_dados-text */
+    font-weight: 600; /* Define a espessura da fonte como 600 (semi-negrito) para âncoras e títulos h6 */
+    margin-top: 60px; /* Define a margem superior de 60 pixels para âncoras e títulos h6 dentro de .portifolio_dados-text */
+    color: var(--main-color); /* Define a cor do texto para âncoras e títulos h6 usando a variável --main-color */
+}
+
+.portifolio_dados-textos p {
+    font-size: var(--p-font); /* Define o tamanho da fonte para os parágrafos dentro de .portifolio_dados-text usando a variável --p-font */
+    color: var(--other-color); /* Define a cor do texto para os parágrafos dentro de .portifolio_dados-text usando a variável --other-color */
+    margin-bottom: 20px; /* Define a margem inferior de 20 pixels para os parágrafos dentro de .portifolio_dados-text */
+    line-height: 2; /* Define a altura da linha como 2 para os parágrafos dentro de .portifolio_dados-text */
+}
+
+.portifolio_dados-icones i {
+    display: inline-block; /* Define o modelo de exibição como bloco em linha para os ícones dentro de .portifolio_dados-icons */
+    font-size: 30px; /* Define o tamanho da fonte para os ícones como 30 pixels */
+    color: var(--text-color); /* Define a cor do texto para os ícones usando a variável --text-color */
+    margin-right: 20px; /* Define a margem à direita de 20 pixels para os ícones */
+    transition: all .6s ease; /* Adiciona uma transição suave para todas as mudanças de propriedade com duração de 0.6 segundos e função de transição "ease" */
+    margin-bottom: 40px; /* Define a margem inferior de 40 pixels para os ícones */
+}
+
+
+.portifolio_linguagem {
+    display: flex; /* Define o modelo de exibição flexível para o elemento com a classe .portifolio_linguagem */
+    align-items: center; /* Centraliza os itens verticalmente dentro de .portifolio_linguagem */
+    justify-content: space-between; /* Distribui os itens horizontalmente em .portifolio_linguagem com espaço entre eles */
+    gap: 3rem; /* Define o espaçamento entre os itens em .portifolio_linguagem como 3 rem (unidade relativa ao tamanho da fonte do root) */
+    height: 100vh; /* Define a altura de .portifolio_linguagem como 100% da altura da janela de visualização */
+    margin-left: 300px; /* Define uma margem à esquerda de 300 pixels para .portifolio_linguagem */
+}
+
+.portifolio_linguagem-img {
+    flex: 0 1 auto; /* Ajusta o comportamento de flex para .portifolio_linguagem-img */
+    max-width: 150px; /* Define a largura máxima para .portifolio_linguagem-img como 150 pixels */
+    width: 100%; /* Define a largura de .portifolio_linguagem-img como 100% */
+}
+
+.portifolio_linguagem-img img {
+    width: 100%; /* Garante que a imagem dentro de .portifolio_linguagem-img ocupe 100% da largura disponível */
+    height: auto; /* Permite que a altura da imagem seja ajustada automaticamente */
+    object-fit: contain; /* Define como a imagem deve se ajustar ao espaço disponível dentro de .portifolio_linguagem-img */
+}
+
+.portifolio_linguagem-textos {
+    flex: 1; /* Permite que o texto dentro de .portifolio_linguagem-text ocupe o espaço restante dentro do contêiner flexível pai */
+    text-align: left; /* Alinha o texto à esquerda dentro de .portifolio_linguagem-text */
+}
+
+.portifolio_linguagem-textos a,h6 {
+    font-size: 22px; /* Define o tamanho da fonte como 22 pixels para âncoras e títulos h6 dentro de .portifolio_linguagem-text */
+    font-weight: 600; /* Define a espessura da fonte como 600 (semi-negrito) para âncoras e títulos h6 */
+    margin-top: 60px; /* Define a margem superior de 60 pixels para âncoras e títulos h6 dentro de .portifolio_linguagem-text */
+    color: var(--main-color); /* Define a cor do texto para âncoras e títulos h6 usando a variável --main-color */
+}
+
+.portifolio_linguagem-textos p {
+    font-size: var(--p-font); /* Define o tamanho da fonte para os parágrafos dentro de .portifolio_linguagem-text usando a variável --p-font */
+    color: var(--other-color); /* Define a cor do texto para os parágrafos dentro de .portifolio_linguagem-text usando a variável --other-color */
+    margin-bottom: 20px; /* Define a margem inferior de 20 pixels para os parágrafos dentro de .portifolio_linguagem-text */
+    line-height: 2; /* Define a altura da linha como 2 para os parágrafos dentro de .portifolio_linguagem-text */
+}
+
+.portifolio_linguagem-icones i {
+    display: inline-block; /* Define o modelo de exibição como bloco em linha para os ícones dentro de .portifolio_linguagem-icons */
+    font-size: 30px; /* Define o tamanho da fonte para os ícones como 30 pixels */
+    color: var(--text-color); /* Define a cor do texto para os ícones usando a variável --text-color */
+    margin-right: 20px; /* Define a margem à direita de 20 pixels para os ícones */
+    transition: all .6s ease; /* Adiciona uma transição suave para todas as mudanças de propriedade com duração de 0.6 segundos e função de transição "ease" */
+    margin-bottom: 40px; /* Define a margem inferior de 40 pixels para os ícones */
+}
+
+.portifolio_web-icones i {
+    display: inline-block; /* Define o modelo de exibição como bloco em linha para os ícones dentro de .portifolio_linguagem-icons */
+    font-size: 30px; /* Define o tamanho da fonte para os ícones como 30 pixels */
+    color: var(--text-color); /* Define a cor do texto para os ícones usando a variável --text-color */
+    margin-right: 20px; /* Define a margem à direita de 20 pixels para os ícones */
+    transition: all .6s ease; /* Adiciona uma transição suave para todas as mudanças de propriedade com duração de 0.6 segundos e função de transição "ease" */
+    margin-bottom: 40px; /* Define a margem inferior de 40 pixels para os ícones */
+}
+
+.contato {
+    display: flex; /* Define o modelo de exibição flexível para o elemento com a classe .contato */
+    align-items: center; /* Centraliza os itens verticalmente dentro de .contato */
+    justify-content: space-between; /* Distribui os itens horizontalmente em .contato com espaço entre eles */
+    gap: 3rem; /* Define o espaçamento entre os itens em .contato como 3 rem (unidade relativa ao tamanho da fonte do root) */
+    height: 100vh; /* Define a altura de .contato como 100% da altura da janela de visualização */
+}
+
+.contato-img {
+    flex: 0 1 auto; /* Ajusta o comportamento de flex para .contato-img */
+    max-width: 300px; /* Define a largura máxima para .contato-img como 300 pixels */
+    width: 100%; /* Define a largura de .contato-img como 100% */
+}
+
+.contato-img img {
+    width: 100%; /* Garante que a imagem dentro de .contato-img ocupe 100% da largura disponível */
+    height: auto; /* Permite que a altura da imagem seja ajustada automaticamente */
+    object-fit: contain; /* Define como a imagem deve se ajustar ao espaço disponível dentro de .contato-img */
+}
+
+.contato-textos {
+    flex: 1; /* Permite que o texto dentro de .contato-text ocupe o espaço restante dentro do contêiner flexível pai */
+    text-align: left; /* Alinha o texto à esquerda dentro de .contato-text */
+}
+
+.contato-textos h6 {
+    font-size: 40px; /* Define o tamanho da fonte como 40 pixels para o título h6 dentro de .contato-text */
+    font-weight: 700; /* Define a espessura da fonte como 700 (negrito) para o título h6 */
+    margin-top: 60px; /* Define a margem superior de 60 pixels para o título h6 dentro de .contato-text */
+}
+
+.contato-textos h6 span {
+    color: var(--main-color); /* Define a cor do texto para o span dentro de h6 dentro de .contato-text usando a variável --main-color */
+}
+
+.contato-textos p {
+    font-size: var(--p-font); /* Define o tamanho da fonte para os parágrafos dentro de .contato-text usando a variável --p-font */
+    color: var(--other-color); /* Define a cor do texto para os parágrafos dentro de .contato-text usando a variável --other-color */
+    margin-bottom: 20px; /* Define a margem inferior de 20 pixels para os parágrafos dentro de .contato-text */
+    line-height: 2; /* Define a altura da linha como 2 para os parágrafos dentro de .contato-text */
+}
+
+.contato-icones i {
+    display: inline-block; /* Define o modelo de exibição como bloco em linha para os ícones dentro de .contato-icons */
+    font-size: 30px; /* Define o tamanho da fonte para os ícones como 30 pixels */
+    color: var(--text-color); /* Define a cor do texto para os ícones usando a variável --text-color */
+    margin-right: 20px; /* Define a margem à direita de 20 pixels para os ícones */
+    transition: all .6s ease; /* Adiciona uma transição suave para todas as mudanças de propriedade com duração de 0.6 segundos e função de transição "ease" */
+    margin-bottom: 40px; /* Define a margem inferior de 40 pixels para os ícones */
+    transition: color .3s; /* Adiciona uma transição para a mudança de cor dos ícones com duração de 0.3 segundos */
+}
+
+
+.icones i {
+    display: inline-block; /* Define o modelo de exibição como bloco em linha para os ícones */
+    font-size: 24px; /* Define o tamanho da fonte para os ícones como 24 pixels */
+    color: var(--text-color); /* Define a cor do texto para os ícones usando a variável --text-color */
+    margin-right: 20px; /* Define a margem à direita de 20 pixels para os ícones */
+    transition: all .6s ease; /* Adiciona uma transição suave para todas as mudanças de propriedade com duração de 0.6 segundos e função de transição "ease" */
+    margin-bottom: 40px; /* Define a margem inferior de 40 pixels para os ícones */
+}
+
+
+.icones i:hover {
+    transform: rotate3d(0, 0, 1, 360deg); /* Aplica uma rotação de 360 graus no eixo Z quando o ícone é hover */
+    color: var(--main-color); /* Muda a cor do texto para os ícones quando hover, usando a variável --main-color */
+}
+
+.sobre {
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.rodape h5 {
+    position: fixed; /* Define a posição do elemento como fixa */
+    bottom: 0; /* Alinha o elemento na parte inferior da janela de visualização */
+    width: 100%; /* Define a largura do elemento como 100% da largura disponível */
+    padding: 2px 0; /* Adiciona preenchimento de 2 pixels na parte superior e inferior do elemento */
+    background: var(--bg-color); /* Define o plano de fundo do elemento usando a variável --bg-color */
+    display: flex; /* Define o modelo de exibição flexível para o elemento */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente dentro do elemento */
+    align-items: center; /* Centraliza o conteúdo verticalmente dentro do elemento */
+    z-index: 1000; /* Define a ordem de empilhamento do elemento */
+}
+
+
+
+@media(max-width: 1800px) {
+    header {
+        padding: 22px 6%; /* Altera o preenchimento do cabeçalho para 22 pixels na parte superior e inferior e 6% nas laterais */
+    }
+    section {
+        padding: 40px 6% 50px; /* Altera o preenchimento da seção para 40 pixels na parte superior, 6% nas laterais e 50 pixels na parte inferior */
+    }
+}
+
+
+@media(max-width: 1510px) {
+    :root {
+        --h1-font: 4.2rem; /* Redefine o tamanho da fonte para h1 como 4.2 rem */
+        --p-font: 1rem; /* Redefine o tamanho da fonte para p como 1 rem */
+    }
+    .inicio-img img {
+        max-width: 540px; /* Define a largura máxima da imagem dentro do componente .hero-img como 540 pixels */
+        width: 100%; /* Garante que a largura da imagem seja 100% do contêiner pai */
+        height: 100%; /* Garante que a altura da imagem seja 100% do contêiner pai */
+        object-fit: contain; /* Define como a imagem deve se ajustar dentro do contêiner */
+    }
+}
+
+
+@media(max-width: 1330px) {
+    header {
+        padding: 22px 4%; /* Altera o preenchimento do cabeçalho para 22 pixels na parte superior e inferior e 4% nas laterais */
+    }
+    section {
+        padding: 40px 4% 50px; /* Altera o preenchimento da seção para 40 pixels na parte superior, 4% nas laterais e 50 pixels na parte inferior */
+    }
+    :root {
+        --h1-font: 4rem; /* Redefine o tamanho da fonte para h1 como 4 rem */
+    }
+    .inicio-img img {
+        max-width: 500px; /* Define a largura máxima da imagem dentro do componente .hero-img como 500 pixels */
+        width: 100%; /* Garante que a largura da imagem seja 100% do contêiner pai */
+        height: 100%; /* Garante que a altura da imagem seja 100% do contêiner pai */
+        object-fit: contain; /* Define como a imagem deve se ajustar dentro do contêiner */
+    }
+}
+
+
+@media(max-width: 1200px) {
+    #menu-icone {
+        display: block; /* Mostra o ícone do menu quando a largura da tela é menor ou igual a 1200 pixels */
+    }
+    .navlist {
+        position: absolute; /* Define a posição absoluta para o elemento .navlist */
+        top: 0; /* Alinha o topo do elemento .navlist com o topo do seu contêiner pai */
+        right: -100%; /* Inicialmente posiciona .navlist fora da tela à direita */
+        width: 100%; /* Define a largura como 100% do contêiner pai */
+        height: 100vh; /* Define a altura como 100% da altura da janela de visualização */
+        backdrop-filter: blur(30px); /* Aplica um filtro de desfoque com 30 pixels de raio ao fundo */
+        display: flex; /* Define o modelo de exibição como flexível */
+        align-items: center; /* Centraliza os itens verticalmente dentro de .navlist */
+        flex-direction: column; /* Define a direção dos itens como coluna */
+        padding-top: 150px; /* Adiciona preenchimento na parte superior de 150 pixels */
+        transition: all .6s ease; /* Adiciona uma transição suave para todas as mudanças de propriedade com duração de 0.6 segundos e função de transição "ease" */
+    }
+    .navlist a {
+        display: block; /* Define os links dentro de .navlist como blocos */
+        padding: 0; /* Remove o preenchimento interno dos links */
+        margin: 0px 0px 30px 0px; /* Define as margens dos links */
+        font-size: 1.7rem; /* Define o tamanho da fonte como 1.7 rem */
+    }
+    .navlist a:hover {
+        color: var(--main-color); /* Altera a cor do texto dos links quando hover para a cor definida pela variável --main-color */
+    }
+    .navlist.open {
+        right: 0; /* Mostra .navlist movendo-a para a direita, mostrando o menu aberto */
+    }
+    header {
+        background: #22211f; /* Define o plano de fundo do cabeçalho como #22211f */
+        padding: 10px 4%; /* Define o preenchimento do cabeçalho */
+    }
+    .logo {
+        font-size: 25px; /* Define o tamanho da fonte para o logotipo como 25 pixels */
+    }
+    .nav-btn {
+        padding: 9px 20px; /* Define o preenchimento para o botão de navegação */
+        font-size: 14px; /* Define o tamanho da fonte para o botão de navegação como 14 pixels */
+    }
+    .scroll {
+        display: none; /* Oculta o elemento com a classe .scroll */
+    }
+    .inicio {
+        flex-direction: column; /* Altera a direção dos itens dentro de .hero para coluna */
+        align-items: center; /* Centraliza os itens horizontalmente dentro de .hero */
+        text-align: center; /* Centraliza o texto dentro de .hero */
+        height: auto; /* Define a altura automática para .hero */
+    }
+    .textos {
+        text-align: center; /* Centraliza o texto dentro de .hero-text */
+        width: 100%; /* Define a largura do texto como 100% */
+    }
+    .textos p {
+        width: 100%; /* Define a largura dos parágrafos dentro de .hero-text como 100% */
+    }
+    .inicio-img {
+        margin-bottom: 2rem; /* Adiciona margem na parte inferior da imagem dentro de .hero-img */
+    }
+    .hero-btn {
+        display: flex; /* Define o modelo de exibição como flexível para .hero-btn */
+        align-items: center; /* Centraliza os itens verticalmente dentro de .hero-btn */
+        justify-content: center; /* Centraliza os itens horizontalmente dentro de .hero-btn */
+    }
+}
+
+
+@media(max-width: 610px) {
+    :root {
+        --h1-font: 2.7rem; /* Redefine o tamanho da fonte para h1 como 2.7 rem */
+    }
+    .textos h4 {
+        font-size: 23px; /* Redefine o tamanho da fonte para h4 dentro de .hero-text como 23 pixels */
+    }
+    .inicio-img {
+        max-width: 150px; /* Define a largura máxima da imagem dentro de .hero-img como 150 pixels */
+    }
+}

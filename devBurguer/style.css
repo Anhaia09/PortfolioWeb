@@ -1,0 +1,391 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Jost", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; /* Rolagem suave */
+}
+
+:root {
+    --bg-color: #1d1c1b; /* Cor de fundo */
+    --text-color: #fff; /* Cor do texto */
+    --main-color: #8a00a3; /* Cor principal */
+    --other-color: #858585; /* Outra cor */
+    --h1-font: 5rem; /* Fonte para h1 */
+    --p-font: 1.1rem; /* Fonte para parágrafo */
+}
+
+body {
+    background: var(--bg-color); /* Fundo */
+    color: var(--text-color); /* Cor do texto */
+    padding-top: 50px; /* Espaçamento para compensar o header fixo (ajuste conforme necessário) */
+}
+
+header {
+    position: fixed; /* Define a posição do cabeçalho como fixa, para que ele permaneça fixo na parte superior da janela ao rolar a página */
+    width: 100%; /* Define a largura do cabeçalho como 100% da largura do viewport */
+    top: 0; /* Alinha o topo do cabeçalho com o topo da janela de visualização */
+    right: 0; /* Alinha a extremidade direita do cabeçalho com a extremidade direita da janela de visualização */
+    z-index: 1000; /* Define a ordem de empilhamento do cabeçalho, garantindo que ele esteja acima de outros elementos com menor valor de z-index */
+    padding: 32px 13%; /* Adiciona preenchimento interno de 32 pixels na parte superior e inferior e 13% nas laterais do cabeçalho */
+    display: flex; /* Define o modelo de exibição como flexível para que os itens dentro do cabeçalho possam ser organizados em uma linha */
+    align-items: center; /* Centraliza verticalmente os itens dentro do cabeçalho */
+    justify-content: space-between; /* Distribui os itens dentro do cabeçalho com espaço igual entre eles */
+    transition: all .50s ease; /* Aplica uma transição suave para todas as mudanças de propriedade com duração de 0.5 segundos e função de transição "ease" */
+    background: var(--bg-color); /* Define o plano de fundo do cabeçalho com a cor definida pela variável --bg-color */
+}
+
+.nav-right {
+    display: flex; /* Flexbox */
+    align-items: left; /* Alinhamento vertical */
+}
+
+.nav-btn {
+    display: inline-block; /* Bloco inline */
+    padding: 14px 35px; /* Espaçamento */
+    background: var(--main-color); /* Fundo */
+    color: var(--text-color); /* Cor do texto */
+    font-size: 15px; /* Tamanho da fonte */
+    font-weight: 700; /* Peso da fonte */
+    margin-left: 80vw;
+    text-transform: uppercase; /* Texto em maiúsculas */
+    letter-spacing: 0.05em; /* Espaçamento entre letras */
+    border-radius: 30px; /* Borda arredondada */
+    border: 2px solid rgb(255, 255, 255); /* Borda */
+    transition: all 0.6s ease; /* Transição suave */
+    position: fixed;
+    
+}
+
+.nav-btn:hover {
+    background: transparent; /* Fundo transparente ao passar o mouse */
+    border: 2px solid var(--main-color); /* Borda ao passar o mouse */
+}
+
+#menu-icon {
+    font-size: 40px; /* Tamanho do ícone */
+    cursor: pointer; /* Cursor de ponteiro */
+    z-index: 10001; /* Índice Z */
+    margin-left: 20px; /* Margem esquerda */
+    display: none; /* Não exibido */
+}
+
+section {
+    padding: 0px 13% 0px; /* Espaçamento */
+}
+
+.texto {
+    display: flex; /* Flexbox */
+    align-items: center; /* Alinhamento vertical */
+    justify-content: space-between; /* Espaçamento entre itens */
+    gap: 3rem; /* Espaçamento entre itens */
+    
+}
+
+.imagens {
+    flex: 0 1 auto; /* Ajusta o comportamento de flex */
+    max-width: 200vw; /* Largura máxima */
+    width: 100%; /* Largura total */
+}
+
+.imagens img {
+    width: 100%; /* Largura total da imagem */
+    height: auto; /* Altura automática */
+    object-fit: contain; /* Ajuste da imagem */
+}
+
+
+.texto {
+    flex: 1; /* Permite que o texto ocupe o espaço restante */
+    text-align: justify; /* Alinhamento do texto */
+}
+
+.textos h1 {
+    font-size: var(--h1-font); /* Fonte para h1 */
+    font-weight: 700; /* Peso da fonte */
+    margin: 20px 0; /* Margem */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+    text-shadow: -1px -1px 0px #000, 7px 7px 0px #000, 9px 9px 0px #00000055; /* Sombra do texto */
+    font-size: 60px;
+}
+
+.textos h1 span {
+    color: var(--main-color); /* Cor do destaque */
+}
+
+.textos h6 {
+    font-size: 22px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    margin-top: 60px; /* Margem superior */
+    color: var(--text-color); /* Cor do texto */
+}
+
+.textos h6 span {
+    color: var(--main-color); /* Cor do destaque */
+}
+
+.textos h4 {
+    font-family: "Caveat", cursive; /* Fonte */
+    font-size: 35px; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+    margin-bottom: 30px; /* Margem inferior */
+}
+
+.textos p, a{
+    font-size: var(--p-font); /* Tamanho da fonte */
+    color: var(--other-color); /* Cor do texto */
+    margin-bottom: 20px; /* Margem inferior */
+    line-height: 2; /* Altura da linha */
+}
+
+.textos h3{
+    font-size: 35px;
+    text-align: center;
+}
+.textos a,i{
+    font-size: 35px;
+    text-align: center;
+    color: var(--main-color);
+
+}
+
+
+.rodape h5 {
+    position: fixed; /* Posição fixa */
+    bottom: 0; /* Alinhado ao fundo */
+    width: 100%; /* Largura total */
+    padding: 2px 0; /* Espaçamento */
+    background: var(--bg-color); /* Fundo */
+    display: flex; /* Flexbox */
+    justify-content: center; /* Centralização */
+    align-items: center; /* Alinhamento vertical */
+    z-index: 1000; /* Índice Z */
+}
+
+@media(max-width: 1800px){
+    header{
+        padding: 22px 6%;
+    }
+    section{
+        padding: 40px 6% 50px;
+    }
+}
+
+@media(max-width: 1510px){
+    :root{
+        --h1-font: 4.2rem;
+        --p-font: 1rem;
+    }
+    .imagens img{
+        max-width: 540px;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+@media(max-width: 1330px){
+    header{
+        padding: 22px 4%;
+    }
+    section{
+        padding: 40px 4% 50px;
+    }
+    :root{
+        --h1-font: 4rem;
+    }
+    .imagens img{
+        max-width: 500px;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+}
+
+@media(max-width: 1200px){
+   
+    .navlist{
+        position: absolute;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        backdrop-filter: blur(30px);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 150px;
+        transition: all .6s ease;
+    }
+    .navlist a{
+        display: block;
+        padding: 0;
+        margin: 0px 0px 30px 0px;
+        font-size: 1.7rem;
+    }
+    .navlist a:hover{
+        color: var(--main-color);
+    }
+    .navlist.open{
+        right: 0;
+
+    }
+    header{
+        background: #22211f;
+        padding: 10px 4%;
+    }
+    .logo{
+        font-size: 25px;
+    }
+    .nav-btn{
+        padding: 9px 20px;
+        font-size: 14px;
+    }
+    .scroll{
+        display: none;
+    }
+    .texto {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+    }
+    .textos {
+        text-align: center;
+        width: 100%;
+    }
+    .textos p{
+        width: 100%;
+    }
+    .imagens {
+        margin-bottom: 2rem;
+    }
+
+}
+
+@media(max-width: 610px){
+    :root{
+        --h1-font: 2.7rem;
+    }
+    .textos h4{
+        font-size: 23px;
+    }
+    .imagens {
+        max-width: 150px;
+    }
+}@media(max-width: 1800px){
+    header{
+        padding: 22px 6%; /* Adiciona padding de 22px no topo e base, 6% nos lados para o cabeçalho */
+    }
+    section{
+        padding: 40px 6% 50px; /* Adiciona padding de 40px no topo, 6% nos lados e 50px na base para seções */
+    }
+}
+
+@media(max-width: 1510px){
+    :root{
+        --h1-font: 4.2rem; /* Define o tamanho da fonte para h1 como 4.2rem */
+        --p-font: 1rem; /* Define o tamanho da fonte para parágrafos como 1rem */
+    }
+    .imagens img{
+        max-width: 540px; /* Define a largura máxima da imagem como 540px */
+        width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
+        height: 100%; /* Garante que a imagem ocupe toda a altura do contêiner */
+        object-fit: contain; /* Define como o conteúdo da imagem deve se ajustar ao contêiner */
+    }
+}
+
+@media(max-width: 1330px){
+    header{
+        padding: 22px 4%; /* Reduz o padding do cabeçalho para 22px no topo e base, 4% nos lados */
+    }
+    section{
+        padding: 40px 4% 50px; /* Reduz o padding das seções para 40px no topo, 4% nos lados e 50px na base */
+    }
+    :root{
+        --h1-font: 4rem; /* Ajusta o tamanho da fonte para h1 como 4rem */
+    }
+    .imagens img{
+        max-width: 500px; /* Define a largura máxima da imagem como 500px */
+        width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
+        height: 100%; /* Garante que a imagem ocupe toda a altura do contêiner */
+        object-fit: contain; /* Define como o conteúdo da imagem deve se ajustar ao contêiner */
+    }
+}
+
+@media(max-width: 1200px){
+    .navlist{
+        position: absolute; /* Define a posição absoluta para a lista de navegação */
+        top: 0; /* Alinha a lista de navegação no topo */
+        right: -100%; /* Inicialmente posiciona a lista de navegação fora da tela */
+        width: 100%; /* Garante que a lista de navegação ocupe toda a largura */
+        height: 100vh; /* Define a altura da lista de navegação como 100% da altura da viewport */
+        backdrop-filter: blur(30px); /* Aplica um efeito de desfoque ao fundo da lista de navegação */
+        display: flex; /* Usa flexbox para layout */
+        align-items: center; /* Alinha itens verticalmente no centro */
+        flex-direction: column; /* Define a direção dos itens como coluna */
+        padding-top: 150px; /* Adiciona padding no topo da lista de navegação */
+        transition: all .6s ease; /* Adiciona uma transição suave para todas as propriedades */
+    }
+    .navlist a{
+        display: block; /* Exibe os links como blocos */
+        padding: 0; /* Remove o padding dos links */
+        margin: 0px 0px 30px 0px; /* Adiciona margem na parte inferior dos links */
+        font-size: 1.7rem; /* Define o tamanho da fonte para os links como 1.7rem */
+    }
+    .navlist a:hover{
+        color: var(--main-color); /* Define a cor do texto dos links ao passar o mouse */
+    }
+    .navlist.open{
+        right: 0; /* Move a lista de navegação para a direita para exibir na tela */
+    }
+    header{
+        background: #22211f; /* Define um fundo escuro para o cabeçalho */
+        padding: 10px 4%; /* Define o padding do cabeçalho como 10px no topo e base, 4% nos lados */
+    }
+    .logo{
+        font-size: 25px; /* Define o tamanho da fonte do logotipo como 25px */
+    }
+    .nav-btn{
+        padding: 9px 20px; /* Define o padding para os botões de navegação */
+        font-size: 14px; /* Define o tamanho da fonte para os botões de navegação como 14px */
+    }
+    .scroll{
+        display: none; /* Oculta o elemento com classe scroll */
+    }
+    .texto {
+        flex-direction: column; /* Define a direção dos itens como coluna */
+        align-items: center; /* Alinha itens verticalmente no centro */
+        text-align: center; /* Alinha texto ao centro */
+        height: auto; /* Define a altura automática para o elemento com classe texto */
+    }
+    .textos {
+        text-align: center; /* Alinha texto ao centro */
+        width: 100%; /* Define a largura como 100% */
+    }
+    .textos p{
+        width: 100%; /* Define a largura dos parágrafos como 100% */
+    }
+    .imagens {
+        margin-bottom: 2rem; /* Adiciona margem na parte inferior das imagens */
+    }
+}
+
+@media(max-width: 610px){
+    :root{
+        --h1-font: 2.7rem; /* Define o tamanho da fonte para h1 como 2.7rem */
+    }
+    .textos h4{
+        font-size: 23px; /* Define o tamanho da fonte para h4 como 23px */
+    }
+    .imagens {
+        max-width: 150px; /* Define a largura máxima das imagens como 150px */
+    }
+}
