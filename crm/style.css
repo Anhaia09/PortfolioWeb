@@ -1,0 +1,300 @@
+* {
+    padding: 0; /* Define o preenchimento interno de todos os elementos como 0 */
+    margin: 0; /* Define as margens de todos os elementos como 0 */
+    box-sizing: border-box; /* Define o modelo de caixa como border-box para todos os elementos, incluindo o preenchimento e a borda no cálculo da largura e altura */
+    list-style: none; /* Remove os estilos de lista padrão (como marcadores) de elementos de lista */
+    text-decoration: none; /* Remove a decoração de texto padrão (como sublinhado) de todos os elementos */
+    font-family: "Jost", sans-serif; /* Define a família de fontes para todos os elementos como "Jost" (se disponível) ou fonte sans-serif genérica */
+}
+
+html {
+    scroll-behavior: smooth; /* Rolagem suave */
+}
+
+:root {
+    --bg-color: #1d1c1b; /* Cor de fundo */
+    --text-color: #fff; /* Cor do texto */
+    --main-color: #8a00a3; /* Cor principal */
+    --other-color: #858585; /* Outra cor */
+    --h1-font: 5rem; /* Fonte para h1 */
+    --p-font: 1.1rem; /* Fonte para parágrafo */
+}
+
+body {
+    background: var(--bg-color); /* Fundo */
+    color: var(--text-color); /* Cor do texto */
+    padding-top: 50px; /* Espaçamento para compensar o header fixo (ajuste conforme necessário) */
+}
+header {
+    position: fixed; /* Define a posição do cabeçalho como fixa, para que ele permaneça fixo na parte superior da janela ao rolar a página */
+    width: 100%; /* Define a largura do cabeçalho como 100% da largura do viewport */
+    top: 0; /* Alinha o topo do cabeçalho com o topo da janela de visualização */
+    right: 0; /* Alinha a extremidade direita do cabeçalho com a extremidade direita da janela de visualização */
+    z-index: 1000; /* Define a ordem de empilhamento do cabeçalho, garantindo que ele esteja acima de outros elementos com menor valor de z-index */
+    padding: 32px 13%; /* Adiciona preenchimento interno de 32 pixels na parte superior e inferior e 13% nas laterais do cabeçalho */
+    display: flex; /* Define o modelo de exibição como flexível para que os itens dentro do cabeçalho possam ser organizados em uma linha */
+    align-items: center; /* Centraliza verticalmente os itens dentro do cabeçalho */
+    justify-content: space-between; /* Distribui os itens dentro do cabeçalho com espaço igual entre eles */
+    transition: all .50s ease; /* Aplica uma transição suave para todas as mudanças de propriedade com duração de 0.5 segundos e função de transição "ease" */
+    background: var(--bg-color); /* Define o plano de fundo do cabeçalho com a cor definida pela variável --bg-color */
+}
+
+.nav-right {
+    display: flex; /* Flexbox */
+    align-items: left; /* Alinhamento vertical */
+}
+
+.nav-btn {
+    display: inline-block; /* Bloco inline */
+    padding: 14px 35px; /* Espaçamento */
+    background: var(--main-color); /* Fundo */
+    color: var(--text-color); /* Cor do texto */
+    font-size: 15px; /* Tamanho da fonte */
+    font-weight: 700; /* Peso da fonte */
+    margin-left: 80vw;
+    text-transform: uppercase; /* Texto em maiúsculas */
+    letter-spacing: 0.05em; /* Espaçamento entre letras */
+    border-radius: 30px; /* Borda arredondada */
+    border: 2px solid rgb(255, 255, 255); /* Borda */
+    transition: all 0.6s ease; /* Transição suave */
+    position: fixed;
+    
+}
+
+.nav-btn:hover {
+    background: transparent; /* Fundo transparente ao passar o mouse */
+    border: 2px solid var(--main-color); /* Borda ao passar o mouse */
+}
+
+#menu-icon {
+    font-size: 40px; /* Tamanho do ícone */
+    cursor: pointer; /* Cursor de ponteiro */
+    z-index: 10001; /* Índice Z */
+    margin-left: 20px; /* Margem esquerda */
+    display: none; /* Não exibido */
+}
+
+section {
+    padding: 0px 13% 0px; /* Espaçamento */
+}
+
+.texto {
+    display: flex; /* Flexbox */
+    align-items: center; /* Alinhamento vertical */
+    justify-content: space-between; /* Espaçamento entre itens */
+    gap: 3rem; /* Espaçamento entre itens */
+    
+}
+
+.imagem-inicio {
+    flex: 0 1 auto; /* Ajusta o comportamento de flex */
+    max-width: 20vw; /* Largura máxima */
+    width: 100%; /* Largura total */
+}
+
+.imagem-inicio img {
+    width: 100%; /* Largura total da imagem */
+    height: auto; /* Altura automática */
+    object-fit: contain; /* Ajuste da imagem */
+}
+.imagens {
+    flex: 0 1 auto; /* Ajusta o comportamento de flex */
+    max-width: 60vw; /* Largura máxima */
+    width: 100%; /* Largura total */
+}
+
+.imagens img {
+    width: 100%; /* Largura total da imagem */
+    height: auto; /* Altura automática */
+    object-fit: contain; /* Ajuste da imagem */
+}
+
+.imagens-comandos {
+    flex: 0 1 auto; /* Ajusta o comportamento de flex */
+    max-width: 20vw; /* Largura máxima */
+    width: 100%; /* Largura total */
+}
+
+.imagens-comandos img {
+    width: 100%; /* Largura total da imagem */
+    height: auto; /* Altura automática */
+    object-fit: contain; /* Ajuste da imagem */
+}
+
+
+.texto {
+    flex: 1; /* Permite que o texto ocupe o espaço restante */
+    text-align: justify; /* Alinhamento do texto */
+}
+
+.textos h1 {
+    font-size: var(--h1-font); /* Fonte para h1 */
+    font-weight: 700; /* Peso da fonte */
+    margin: 20px 0; /* Margem */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+    text-shadow: -1px -1px 0px #000, 7px 7px 0px #000, 9px 9px 0px #00000055; /* Sombra do texto */
+    font-size: 60px;
+}
+
+.textos h1 span {
+    color: var(--main-color); /* Cor do destaque */
+}
+
+.textos h6 {
+    font-size: 22px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    margin-top: 60px; /* Margem superior */
+    color: var(--text-color); /* Cor do texto */
+}
+
+.textos h6 span {
+    color: var(--main-color); /* Cor do destaque */
+}
+
+.textos h4 {
+    font-family: "Caveat", cursive; /* Fonte */
+    font-size: 35px; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+    margin-bottom: 30px; /* Margem inferior */
+}
+
+.textos p, a{
+    font-size: var(--p-font); /* Tamanho da fonte */
+    color: var(--other-color); /* Cor do texto */
+    margin-bottom: 20px; /* Margem inferior */
+    line-height: 2; /* Altura da linha */
+}
+
+.textos h3{
+    font-size: 35px;
+    text-align: center;
+}
+.textos a,i{
+    font-size: 35px;
+    text-align: center;
+    color: var(--main-color);
+
+}
+
+.rodape h5 {
+    position: fixed; /* Posição fixa */
+    bottom: 0; /* Alinhado ao fundo */
+    width: 100%; /* Largura total */
+    padding: 2px 0; /* Espaçamento */
+    background: var(--bg-color); /* Fundo */
+    display: flex; /* Flexbox */
+    justify-content: center; /* Centralização */
+    align-items: center; /* Alinhamento vertical */
+    z-index: 1000; /* Índice Z */
+}
+
+@media(max-width: 1800px){
+    header{
+        padding: 22px 6%; /* Adiciona padding ao cabeçalho */
+    }
+    section{
+        padding: 40px 6% 50px; /* Adiciona padding à seção */
+    }
+}
+
+@media(max-width: 1510px){
+    :root{
+        --h1-font: 4.2rem; /* Define o tamanho da fonte para h1 */
+        --p-font: 1rem; /* Define o tamanho da fonte para p */
+    }
+    .imagens img{
+        max-width: 540px; /* Define a largura máxima para imagens dentro de .imagens */
+        width: 100%; /* Define a largura total para imagens dentro de .imagens */
+        height: 100%; /* Define a altura total para imagens dentro de .imagens */
+        object-fit: contain; /* Controla como a imagem se ajusta ao tamanho do container */
+    }
+}
+
+@media(max-width: 1330px){
+    header{
+        padding: 22px 4%; /* Adiciona padding ao cabeçalho */
+    }
+    section{
+        padding: 40px 4% 50px; /* Adiciona padding à seção */
+    }
+    :root{
+        --h1-font: 4rem; /* Define o tamanho da fonte para h1 */
+    }
+    .imagens img{
+        max-width: 500px; /* Define a largura máxima para imagens dentro de .imagens */
+        width: 100%; /* Define a largura total para imagens dentro de .imagens */
+        height: 100%; /* Define a altura total para imagens dentro de .imagens */
+        object-fit: contain; /* Controla como a imagem se ajusta ao tamanho do container */
+    }
+}
+
+@media(max-width: 1200px){
+    .navlist{
+        position: absolute; /* Posiciona absolutamente */
+        top: 0; /* Alinha ao topo */
+        right: -100%; /* Inicia fora da tela à direita */
+        width: 100%; /* Largura total */
+        height: 100vh; /* Altura total da viewport */
+        backdrop-filter: blur(30px); /* Aplica filtro de desfoque ao fundo */
+        display: flex; /* Exibe como flex container */
+        align-items: center; /* Alinha itens ao centro verticalmente */
+        flex-direction: column; /* Direção da coluna para os itens */
+        padding-top: 150px; /* Espaçamento superior */
+        transition: all .6s ease; /* Transição suave de animação */
+    }
+    .navlist a{
+        display: block; /* Exibe como bloco */
+        padding: 0; /* Sem padding */
+        margin: 0px 0px 30px 0px; /* Margem inferior */
+        font-size: 1.7rem; /* Tamanho da fonte */
+    }
+    .navlist a:hover{
+        color: var(--main-color); /* Cor do texto ao passar o mouse */
+    }
+    .navlist.open{
+        right: 0; /* Abre o menu à direita */
+    }
+    header{
+        background: #22211f; /* Cor de fundo do cabeçalho */
+        padding: 10px 4%; /* Adiciona padding ao cabeçalho */
+    }
+    .logo{
+        font-size: 25px; /* Tamanho da fonte do logo */
+    }
+    .nav-btn{
+        padding: 9px 20px; /* Padding do botão de navegação */
+        font-size: 14px; /* Tamanho da fonte do botão de navegação */
+    }
+    .scroll{
+        display: none; /* Oculta o elemento de classe .scroll */
+    }
+    .texto {
+        flex-direction: column; /* Direção da coluna para .texto */
+        align-items: center; /* Alinha itens ao centro verticalmente */
+        text-align: center; /* Alinha texto ao centro */
+        height: auto; /* Altura automática */
+    }
+    .textos {
+        text-align: center; /* Alinha texto ao centro */
+        width: 100%; /* Largura total */
+    }
+    .textos p{
+        width: 100%; /* Largura total para parágrafos dentro de .textos */
+    }
+    .imagens {
+        margin-bottom: 2rem; /* Margem inferior para .imagens */
+    }
+}
+
+@media(max-width: 610px){
+    :root{
+        --h1-font: 2.7rem; /* Define o tamanho da fonte para h1 */
+    }
+    .textos h4{
+        font-size: 23px; /* Tamanho da fonte para h4 dentro de .textos */
+    }
+    .imagens {
+        max-width: 150px; /* Largura máxima para .imagens */
+    }
+}
