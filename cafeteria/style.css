@@ -112,32 +112,6 @@ main {
     color: var(--main-color);
 }
 
-.botoes {
-    display: flex;
-    gap: 3rem;
-    justify-content: center;
-    margin: 2rem 0;
-    padding-bottom: 40px;
-}
-
-.botao {
-    padding: 0.8rem 1.5rem;
-    background-color: var(--main-color);
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    transition: background-color 0.3s;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: var(--p-font);
-}
-
-.botao:hover {
-    background-color: #6d0080;
-    transform: translateY(-2px);
-}
-
 .rodape {
     padding: 10px 0;
     background: var(--bg-color);
@@ -217,17 +191,6 @@ main {
     
     .textos h1 {
         font-size: 35px;
-    }
-    
-    .botoes {
-        flex-direction: column;
-        gap: 1.5rem;
-        align-items: center;
-    }
-    
-    .botao {
-        width: 80%;
-        justify-content: center;
     }
 }
 
