@@ -1,276 +1,260 @@
 * {
-    padding: 0; /* Define o preenchimento interno de todos os elementos como 0 */
-    margin: 0; /* Define as margens de todos os elementos como 0 */
-    box-sizing: border-box; /* Define o modelo de caixa como border-box para todos os elementos, incluindo o preenchimento e a borda no cálculo da largura e altura */
-    list-style: none; /* Remove os estilos de lista padrão (como marcadores) de elementos de lista */
-    text-decoration: none; /* Remove a decoração de texto padrão (como sublinhado) de todos os elementos */
-    font-family: "Jost", sans-serif; /* Define a família de fontes para todos os elementos como "Jost" (se disponível) ou fonte sans-serif genérica */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Jost", sans-serif;
 }
 
-
 html {
-    scroll-behavior: smooth; /* Rolagem suave */
+    scroll-behavior: smooth;
 }
 
 :root {
-    --bg-color: #1d1c1b; /* Cor de fundo */
-    --text-color: #fff; /* Cor do texto */
-    --main-color: #8a00a3; /* Cor principal */
-    --other-color: #858585; /* Outra cor */
-    --h1-font: 5rem; /* Fonte para h1 */
-    --p-font: 1.1rem; /* Fonte para parágrafo */
+    --bg-color: #1d1c1b;
+    --text-color: #fff;
+    --main-color: #8a00a3;
+    --other-color: #858585;
+    --h1-font: 5rem;
+    --p-font: 1.1rem;
 }
 
 body {
-    background: var(--bg-color); /* Fundo */
-    color: var(--text-color); /* Cor do texto */
-    padding-top: 50px; /* Espaçamento para compensar o header fixo (ajuste conforme necessário) */
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding-top: 70px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
-    position: fixed; /* Define a posição do cabeçalho como fixa, para que ele permaneça fixo na parte superior da janela ao rolar a página */
-    width: 100%; /* Define a largura do cabeçalho como 100% da largura do viewport */
-    top: 0; /* Alinha o topo do cabeçalho com o topo da janela de visualização */
-    right: 0; /* Alinha a extremidade direita do cabeçalho com a extremidade direita da janela de visualização */
-    z-index: 1000; /* Define a ordem de empilhamento do cabeçalho, garantindo que ele esteja acima de outros elementos com menor valor de z-index */
-    padding: 32px 13%; /* Adiciona preenchimento interno de 32 pixels na parte superior e inferior e 13% nas laterais do cabeçalho */
-    display: flex; /* Define o modelo de exibição como flexível para que os itens dentro do cabeçalho possam ser organizados em uma linha */
-    align-items: center; /* Centraliza verticalmente os itens dentro do cabeçalho */
-    justify-content: space-between; /* Distribui os itens dentro do cabeçalho com espaço igual entre eles */
-    transition: all .50s ease; /* Aplica uma transição suave para todas as mudanças de propriedade com duração de 0.5 segundos e função de transição "ease" */
-    background: var(--bg-color); /* Define o plano de fundo do cabeçalho com a cor definida pela variável --bg-color */
-}
-
-
-.nav-right {
-    display: flex; /* Flexbox */
-    align-items: left; /* Alinhamento vertical */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 20px 13%;
+    display: flex;
+    justify-content: flex-end;
+    background: var(--bg-color);
+    transition: all 0.5s ease;
 }
 
 .nav-btn {
-    display: inline-block; /* Bloco inline */ 
-    padding: 14px 35px; /* Espaçamento */
-    background: var(--main-color); /* Fundo */
-    color: var(--text-color); /* Cor do texto */
-    font-size: 15px; /* Tamanho da fonte */
-    font-weight: 700; /* Peso da fonte */
-    margin-left: 80vw;
-    text-transform: uppercase; /* Texto em maiúsculas */
-    letter-spacing: 0.05em; /* Espaçamento entre letras */
-    border-radius: 30px; /* Borda arredondada */
-    border: 2px solid rgb(255, 255, 255); /* Borda */
-    transition: all 0.6s ease; /* Transição suave */
-    position: fixed;
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--main-color);
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 30px;
+    border: 2px solid rgb(255, 255, 255);
+    transition: all 0.6s ease;
 }
 
 .nav-btn:hover {
-    background: transparent; /* Fundo transparente ao passar o mouse */
-    border: 2px solid var(--main-color); /* Borda ao passar o mouse */
+    background: transparent;
+    border: 2px solid var(--main-color);
 }
 
-#menu-icone {
-    font-size: 40px; /* Define o tamanho da fonte para o ícone de menu como 40 pixels */
-    cursor: pointer; /* Define o cursor do mouse como ponteiro para indicar que o elemento é clicável */
-    z-index: 10001; /* Define a ordem de empilhamento do ícone de menu */
-    margin-left: 20px; /* Define a margem à esquerda do ícone de menu */
-    display: none; /* Esconde inicialmente o ícone de menu */
-}
-
-
-section {
-    padding: 0px 13% 0px; /* Espaçamento */
+main {
+    flex: 1;
+    padding: 0 13%;
 }
 
 .texto {
-    display: flex; /* Flexbox */
-    align-items: center; /* Alinhamento vertical */
-    justify-content: space-between; /* Espaçamento entre itens */
-    gap: 3rem; /* Espaçamento entre itens */
-    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 40px 0;
 }
 
 .videos {
-    flex: 0 1 auto; /* Ajusta o comportamento de flex */
-    max-width: 50vw; /* Largura máxima */
-    width: 100%; /* Largura total */
+    max-width: 80vw;
+    width: 100%;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
 }
 
 .textos {
-    flex: 1; /* Permite que o texto ocupe o espaço restante */
-    text-align: left; /* Alinhamento do texto */
+    flex: 1;
+    text-align: left;
 }
 
 .textos h1 {
-    font-size: var(--h1-font); /* Fonte para h1 */
-    font-weight: 700; /* Peso da fonte */
-    margin: 20px 0; /* Margem */
-    text-transform: uppercase; /* Texto em maiúsculas */
-    letter-spacing: 2px; /* Espaçamento entre letras */
-    text-shadow: -1px -1px 0px #000, 7px 7px 0px #000, 9px 9px 0px #00000055; /* Sombra do texto */
     font-size: 60px;
+    font-weight: 700;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: -1px -1px 0px #000, 7px 7px 0px #000, 9px 9px 0px #00000055;
 }
 
 .textos h1 span {
-    color: var(--main-color); /* Cor do destaque */
+    color: var(--main-color);
 }
 
-.textos h6 {
-    font-size: 22px; /* Tamanho da fonte */
-    font-weight: 600; /* Peso da fonte */
-    margin-top: 60px; /* Margem superior */
-    color: var(--text-color); /* Cor do texto */
-}
-
-.textos h6 span {
-    color: var(--main-color); /* Cor do destaque */
-}
-
-.textos h4 {
-    font-family: "Caveat", cursive; /* Fonte */
-    font-size: 35px; /* Tamanho da fonte */
-    font-weight: bold; /* Peso da fonte */
-    margin-bottom: 30px; /* Margem inferior */
-}
-
-.textos p, a{
-    font-size: var(--p-font); /* Tamanho da fonte */
-    color: var(--other-color); /* Cor do texto */
-    margin-bottom: 20px; /* Margem inferior */
-    line-height: 2; /* Altura da linha */
+.textos p {
+    font-size: var(--p-font);
+    color: var(--text-color);
+    margin-bottom: 20px;
+    line-height: 1.6;
     text-align: justify;
-    
-}
-.textos h3 {
-    font-size: 35px; /* Define o tamanho da fonte como 35 pixels */
-    text-align: center; /* Alinha o texto ao centro */
-}
-.textos a, i {
-    font-size: 35px; /* Define o tamanho da fonte como 35 pixels para links e ícones */
-    text-align: center; /* Alinha o texto ao centro para links e ícones */
-    color: var(--main-color); /* Define a cor do texto como a variável --main-color */
-}
-.rodape h5 {
-    position: fixed; /* Posição fixa */
-    bottom: 0; /* Alinhado ao fundo */
-    width: 100%; /* Largura total */
-    padding: 2px 0; /* Espaçamento */
-    background: var(--bg-color); /* Fundo */
-    display: flex; /* Flexbox */
-    justify-content: center; /* Centralização */
-    align-items: center; /* Alinhamento vertical */
-    z-index: 1000; /* Índice Z */
 }
 
-@media(max-width: 1800px) {
-    header {
-        padding: 22px 6%; /* Define o preenchimento interno do cabeçalho como 22px na parte superior e inferior e 6% nas laterais */
+.textos p strong {
+    color: var(--main-color);
+}
+
+.botoes {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    margin: 2rem 0;
+    padding-bottom: 40px;
+}
+
+.botao {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--main-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--p-font);
+}
+
+.botao:hover {
+    background-color: #6d0080;
+    transform: translateY(-2px);
+}
+
+.rodape {
+    padding: 10px 0;
+    background: var(--bg-color);
+    text-align: center;
+    width: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 1800px) {
+    header, main {
+        padding: 20px 6%;
     }
-    section {
-        padding: 40px 6% 50px; /* Define o preenchimento interno da seção como 40px na parte superior, 6% nas laterais e 50px na parte inferior */
-    }
 }
 
-
-@media(max-width: 1510px) {
+@media (max-width: 1510px) {
     :root {
-        --h1-font: 4.2rem; /* Redefine o tamanho da fonte para h1 como 4.2 rem */
-        --p-font: 1rem; /* Redefine o tamanho da fonte para p como 1 rem */
+        --h1-font: 4.2rem;
+        --p-font: 1rem;
     }
-    .videos {
-        max-width: 540px; /* Define a largura máxima do elemento com a classe .videos como 540 pixels */
-        width: 100%; /* Garante que o elemento .videos ocupe toda a largura disponível */
-        height: 100%; /* Garante que o elemento .videos ocupe toda a altura disponível */
-        object-fit: contain; /* Define o comportamento de ajuste da imagem dentro do elemento como 'contain' */
-    }
-}
-
-
-@media(max-width: 1330px) {
-    header {
-        padding: 22px 4%; /* Define o preenchimento interno do cabeçalho como 22px na parte superior e inferior e 4% nas laterais */
-    }
-    section {
-        padding: 40px 4% 50px; /* Define o preenchimento interno da seção como 40px na parte superior, 4% nas laterais e 50px na parte inferior */
-    }
-    :root {
-        --h1-font: 4rem; /* Redefine o tamanho da fonte para h1 como 4 rem */
-    }
-    .videos {
-        max-width: 500px; /* Define a largura máxima do elemento com a classe .videos como 500 pixels */
-        width: 100%; /* Garante que o elemento .videos ocupe toda a largura disponível */
-        height: 100%; /* Garante que o elemento .videos ocupe toda a altura disponível */
-        object-fit: contain; /* Define o comportamento de ajuste da imagem dentro do elemento como 'contain' */
-    }
-}
-
-
-@media(max-width: 1200px) {
     
-    .navlist {
-        position: absolute; /* Define a posição absoluta para o menu de navegação */
-        top: 0;
-        right: -100%; /* Esconde o menu de navegação para a direita da tela */
-        width: 100%; /* Ocupa toda a largura disponível */
-        height: 100vh; /* Ocupa toda a altura da viewport */
-        backdrop-filter: blur(30px); /* Aplica um efeito de desfoque no fundo do menu */
-        display: flex; /* Usa o modelo de layout flexível */
-        align-items: center; /* Alinha os itens ao centro verticalmente */
-        flex-direction: column; /* Define a direção dos itens como coluna */
-        padding-top: 150px; /* Espaçamento superior do menu de navegação */
-        transition: all .6s ease; /* Animação suave para todas as propriedades */
+    .textos h1 {
+        font-size: 50px;
     }
-    .navlist a {
-        display: block; /* Exibe os links de navegação como blocos */
-        padding: 0;
-        margin: 0px 0px 30px 0px; /* Margem inferior dos links de navegação */
-        font-size: 1.7rem; /* Tamanho da fonte dos links de navegação */
+    
+    .videos {
+        max-width: 540px;
     }
-    .navlist a:hover {
-        color: var(--main-color); /* Cor dos links de navegação ao passar o mouse */
+}
+
+@media (max-width: 1330px) {
+    header, main {
+        padding: 20px 4%;
     }
-    .navlist.open {
-        right: 0; /* Mostra o menu de navegação à direita da tela quando aberto */
+    
+    :root {
+        --h1-font: 4rem;
     }
+    
+    .textos h1 {
+        font-size: 45px;
+    }
+    
+    .videos {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 1200px) {
     header {
-        background: #22211f; /* Cor de fundo do cabeçalho */
-        padding: 10px 4%; /* Preenchimento interno do cabeçalho */
+        padding: 15px 4%;
     }
-    .logo {
-        font-size: 25px; /* Tamanho da fonte do logotipo */
-    }
-    .nav-btn {
-        padding: 9px 20px; /* Preenchimento do botão de navegação */
-        font-size: 14px; /* Tamanho da fonte do botão de navegação */
-    }
-    .scroll {
-        display: none; /* Esconde o elemento com a classe .scroll */
-    }
+    
     .texto {
-        flex-direction: column; /* Define a direção dos itens como coluna */
-        align-items: center; /* Alinha os itens ao centro verticalmente */
-        text-align: center; /* Alinha o texto ao centro */
-        height: auto; /* Altura automática */
+        flex-direction: column;
+        text-align: center;
     }
-    .texto {
-        text-align: center; /* Alinha o texto ao centro */
-        width: 100%; /* Ocupa toda a largura disponível */
+    
+    .textos {
+        text-align: center;
+        width: 100%;
     }
+    
     .textos p {
-        width: 100%; /* Ocupa toda a largura disponível */
+        text-align: center;
     }
+    
     .videos {
-        margin-bottom: 2rem; /* Espaçamento inferior do elemento .videos */
+        margin-bottom: 2rem;
+        max-width: 80%;
     }
 }
 
-@media(max-width: 610px) {
+@media (max-width: 768px) {
     :root {
-        --h1-font: 2.7rem; /* Redefine o tamanho da fonte para h1 como 2.7 rem quando a largura da tela é até 610 pixels */
+        --h1-font: 3rem;
     }
-    .textos h4 {
-        font-size: 23px; /* Define o tamanho da fonte para h4 dentro do elemento com a classe .textos como 23 pixels */
+    
+    .textos h1 {
+        font-size: 35px;
     }
+    
+    .botoes {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+    
+    .botao {
+        width: 80%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 610px) {
+    :root {
+        --h1-font: 2.7rem;
+        --p-font: 0.9rem;
+    }
+    
+    .textos h1 {
+        font-size: 30px;
+    }
+    
+    body {
+        padding-top: 60px;
+    }
+    
+    header {
+        padding: 10px 4%;
+    }
+    
+    .nav-btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    
     .videos {
-        max-width: 150px; /* Define a largura máxima do elemento com a classe .videos como 150 pixels */
+        max-width: 90%;
     }
 }
