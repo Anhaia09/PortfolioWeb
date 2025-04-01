@@ -24,12 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
         header.classList.toggle("sticky", window.scrollY > 100); // Adiciona a classe 'sticky' ao cabeçalho se a posição do scroll for maior que 100 pixels
     });
 
-    // Mostra o botão de rolagem para cima
-    window.addEventListener("scroll", function () {
-        let scrool = document.querySelector("#scrool-up"); // Seleciona o botão de rolagem para cima
-        scrool.classList.toggle("srcl", window.scrollY > 600); // Adiciona a classe 'srcl' ao botão se a posição do scroll for maior que 600 pixels
-    });
-
     // Rolagem suave para as seções ao clicar nos links do menu
     let navLinks = document.querySelectorAll('.navlist a'); // Seleciona todos os links dentro da lista de navegação
 
